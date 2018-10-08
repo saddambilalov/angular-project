@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -15,6 +15,8 @@ import { UserDetails } from '../user/userdetails.component';
 import { UserService } from '../services/user.service';
 import { NavbarComponent } from './navbar.component';
 import { TOASTR_TOKEN } from '../services/toaster.service';
+import { FormValidationComponent } from '../components/formvalidation.component';
+import { ReactiveValidationComponent } from '../components/reactivevalidation.component';
 
 declare let toastr: any;
 
@@ -25,6 +27,8 @@ declare let toastr: any;
     EventComponent,
     CounterComponent,
     LoginComponent,
+    FormValidationComponent,
+    ReactiveValidationComponent,
     NavbarComponent,
     UserDetails,
     FileSizePipe
@@ -32,6 +36,7 @@ declare let toastr: any;
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(baseAppRoutes)
   ],
   providers: [
